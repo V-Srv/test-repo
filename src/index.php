@@ -42,20 +42,20 @@ function parseParams(array $params): array {
         throw new Exception(MESSAGE);
     }
 
-    if (!is_int($params[1])
-        || !is_int($params[2])
-        || !is_int($params[3])
-        || !is_int($params[4])
-        || !is_int($params[5])
+    if (!is_numeric($params[1])
+        || !is_numeric($params[2])
+        || !is_numeric($params[3])
+        || !is_numeric($params[4])
+        || !is_numeric($params[5])
     ) {
         throw new Exception(VALIDATION);
     }
 
     return [
         'type' => $params[1],
-        'width1' => $params[2],
-        'height1' => $params[3],
-        'width2' => $params[4],
-        'height2' => $params[5],
+        'width1' => (int) $params[2],
+        'height1' => (int) $params[3],
+        'width2' => (int) $params[4],
+        'height2' => (int) $params[5],
     ];
 }
