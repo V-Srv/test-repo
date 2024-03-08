@@ -42,8 +42,7 @@ function parseParams(array $params): array {
         throw new Exception(MESSAGE);
     }
 
-    if (!is_numeric($params[1])
-        || !is_numeric($params[2])
+    if (!is_numeric($params[2])
         || !is_numeric($params[3])
         || !is_numeric($params[4])
         || !is_numeric($params[5])
