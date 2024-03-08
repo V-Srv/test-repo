@@ -1,0 +1,10 @@
+{
+    "name": "denis/test-repo",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Denis\\TestRepo\\": "src/"
+        }
+    },
+    "require": {}
+}
